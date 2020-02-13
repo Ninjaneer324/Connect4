@@ -7,7 +7,7 @@ class circle:
     y = 0
     done = False
 
-    def __init__(self, (r,g,b,), (x,y)):
+    def __init__(self, r,g,b,x,y):
         self.red = r
         self.green = g
         self.blue = b
