@@ -1,6 +1,5 @@
 import pygame
-from pygame.locals import *
-from circle import *
+from circle import circle
 
 width = 800
 height = 800
@@ -165,10 +164,10 @@ while instruct:
     window.blit(i_2, (285, 260))
     window.blit(i_3, (250, 320))
     for event in pygame.event.get():
-        if event.type == QUIT:
+        if event.type == pygame.QUIT:
             quit()
             exit()
-        if event.type == KEYDOWN:
+        if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
                 instruct = False
     pygame.display.update()
@@ -179,15 +178,15 @@ while True:
     if play:
         main = circle(color[0],color[1],color[2], pos[0],pos[1])
         for event in pygame.event.get():
-            if event.type == QUIT:
+            if event.type == pygame.QUIT:
                 quit()
                 exit()
-            if event.type == KEYDOWN:
-                if event.key == K_LEFT:
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
                     if main.x - 100 >= 100:
                         main.moveLeft()
                         pos = main.pos()
-                if event.key == K_RIGHT:
+                if event.key == pygame.K_RIGHT:
                     if main.x + 100 <= 700:
                         main.moveRight()
                         pos = main.pos()
