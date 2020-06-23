@@ -244,11 +244,11 @@ while True:
             window.blit(temp, (250, 350))
             get_out = False
             for event in pygame.event.get():
-                if event.type == QUIT:
+                if event.type == pygame.QUIT:
                     quit()
                     exit()
-                if event.type == KEYDOWN:
-                    if event.key == K_BACKSPACE:
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_BACKSPACE:
                         play = True
                         red = False
                         yellow = False
